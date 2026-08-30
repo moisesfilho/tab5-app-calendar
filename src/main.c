@@ -156,6 +156,7 @@ static void on_today(void *user_data)
 static void app_init(void)
 {
     tab5_system_log(2, "tab5_calendar", "Aplicativo Calendario iniciado");
+    tab5_ui_app_bar_set_title("Calendario");
 
     struct tm t = {};
     if (tab5_system_get_time(NULL, &t) == TAB5_OK && t.tm_year > 0) {
@@ -166,12 +167,7 @@ static void app_init(void)
     s_view_year = s_today_year;
     s_view_month = s_today_month;
 
-    tab5_ui_app_bar_add_action_button("<", on_prev_month, NULL);
-    tab5_ui_app_bar_add_action_button(">", on_next_month, NULL);
-    tab5_ui_app_bar_add_action_button("Hoje", on_today, NULL);
-
     update_calendar_view();
-    tab5_ui_show_toast("Calendario aberto", 1500);
 }
 
 static void app_resume(void)
@@ -203,5 +199,6 @@ TAB5_APP_EXPORT int main(int argc, char **argv)
     };
 
     tab5_lifecycle_register(&cbs);
+    app_init();
     return 0;
 }
