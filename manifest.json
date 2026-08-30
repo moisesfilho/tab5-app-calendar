@@ -1,0 +1,14 @@
+{
+  "id": "com.tab5.calendar",
+  "name": "Calendário",
+  "version": "1.0.0",
+  "author": "Tab5 OS Team",
+  "description": "Visualizador de calendário mensal e navegação de datas.",
+  "entry": "app.wasm",
+  "icon_symbol": "LV_SYMBOL_CALENDAR",
+  "icon_bg_color": "#3B82F6",
+  "file_associations": [],
+  "permissions": [],
+  "stack_size": 65536,
+  "heap_size": 131072
+}
