@@ -6,7 +6,7 @@
   "description": "Visualizador de calendário mensal e navegação de datas.",
   "entry": "app.wasm",
   "icon_symbol": "31",
-  "icon_bg_color": "#3B82F6",
+  "icon_bg_color": "#F97316",
   "file_associations": [],
   "permissions": [],
   "stack_size": 65536,
